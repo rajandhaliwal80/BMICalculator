@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/// <summary>
+/// Rajandeep Kaur Dhaliwal
+/// Assignment 5- BMI Calculator
+/// BMI Calculator
+/// </summary>
 
 namespace BMICalculator
 {
@@ -15,6 +20,11 @@ namespace BMICalculator
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

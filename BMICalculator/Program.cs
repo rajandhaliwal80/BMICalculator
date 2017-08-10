@@ -4,6 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Rajandeep Kaur Dhaliwal
+/// Assignment 5- BMI Calculator
+/// Driver Class
+/// </summary>
 namespace BMICalculator
 {
     static class Program
