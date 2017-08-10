@@ -28,13 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.AppLayout = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
+            // 
+            // AppLayout
+            // 
+            this.AppLayout.ColumnCount = 3;
+            this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.AppLayout.Location = new System.Drawing.Point(1, 1);
+            this.AppLayout.Name = "AppLayout";
+            this.AppLayout.RowCount = 6;
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.AppLayout.Size = new System.Drawing.Size(319, 431);
+            this.AppLayout.TabIndex = 0;
             // 
             // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(302, 433);
+            this.Controls.Add(this.AppLayout);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
@@ -48,6 +68,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel AppLayout;
     }
 }
 
