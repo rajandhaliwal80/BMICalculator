@@ -26,13 +26,21 @@ namespace BMICalculator
         {
 
         }
-
+        /// <summary>
+        /// This event changes the units to metric units
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Metric_CheckedChanged(object sender, EventArgs e)
         {
             HeightUnits.Text = "m";
             WightUnits.Text = "kgs";
         }
-
+        /// <summary>
+        /// this event changes the units to imperial units
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Imperial_CheckedChanged(object sender, EventArgs e)
         {
             HeightUnits.Text = "inches";
@@ -67,7 +75,11 @@ namespace BMICalculator
         {
 
         }
-
+        /// <summary>
+        /// this events modifies height textbox to accept only numbers and backspace
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HeightText_KeyPress(object sender, KeyPressEventArgs e)
         {
             char inputHeight = e.KeyChar;
@@ -81,7 +93,11 @@ namespace BMICalculator
         {
 
         }
-
+        /// <summary>
+        /// This event modifies the weight textbox to only accept numbers and backspace.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WeightText_KeyPress(object sender, KeyPressEventArgs e)
         {
             char inputWeight = e.KeyChar;
