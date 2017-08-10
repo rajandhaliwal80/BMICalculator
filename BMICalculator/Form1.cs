@@ -71,7 +71,7 @@ namespace BMICalculator
         private void HeightText_KeyPress(object sender, KeyPressEventArgs e)
         {
             char inputHeight = e.KeyChar;
-            if(!char.IsDigit(inputHeight)&& inputHeight!=46)
+            if(!char.IsDigit(inputHeight)&& inputHeight!=8 && inputHeight != 46)
             {
                 e.Handled = true;
             }
@@ -84,8 +84,8 @@ namespace BMICalculator
 
         private void WeightText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char inputHeight = e.KeyChar;
-            if (!char.IsDigit(inputHeight) && inputHeight != 46)
+            char inputWeight = e.KeyChar;
+            if (!char.IsDigit(inputWeight) && inputWeight != 8 && inputWeight != 46)
             {
                 e.Handled = true;
             }
