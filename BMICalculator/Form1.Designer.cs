@@ -76,7 +76,7 @@
             // 
             this.Metric.AutoSize = true;
             this.Metric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Metric.Location = new System.Drawing.Point(102, 3);
+            this.Metric.Location = new System.Drawing.Point(103, 3);
             this.Metric.Name = "Metric";
             this.Metric.Size = new System.Drawing.Size(82, 28);
             this.Metric.TabIndex = 1;
@@ -109,7 +109,7 @@
             // 
             this.HeightUnits.AutoSize = true;
             this.HeightUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeightUnits.Location = new System.Drawing.Point(201, 213);
+            this.HeightUnits.Location = new System.Drawing.Point(203, 213);
             this.HeightUnits.Name = "HeightUnits";
             this.HeightUnits.Size = new System.Drawing.Size(28, 25);
             this.HeightUnits.TabIndex = 4;
@@ -119,12 +119,11 @@
             // 
             this.WightUnits.AutoSize = true;
             this.WightUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WightUnits.Location = new System.Drawing.Point(201, 284);
+            this.WightUnits.Location = new System.Drawing.Point(203, 284);
             this.WightUnits.Name = "WightUnits";
             this.WightUnits.Size = new System.Drawing.Size(33, 25);
             this.WightUnits.TabIndex = 5;
             this.WightUnits.Text = "kg";
-            //this.WightUnits.Click += new System.EventHandler(this.WightUnits_Click);
             // 
             // Calculate
             // 
@@ -143,7 +142,7 @@
             this.Imperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Imperial.Location = new System.Drawing.Point(3, 3);
             this.Imperial.Name = "Imperial";
-            this.Imperial.Size = new System.Drawing.Size(93, 28);
+            this.Imperial.Size = new System.Drawing.Size(94, 28);
             this.Imperial.TabIndex = 7;
             this.Imperial.TabStop = true;
             this.Imperial.Text = "Imperial";
@@ -178,7 +177,7 @@
             // HeightText
             // 
             this.HeightText.BackColor = System.Drawing.Color.Snow;
-            this.HeightText.Location = new System.Drawing.Point(102, 216);
+            this.HeightText.Location = new System.Drawing.Point(103, 216);
             this.HeightText.Name = "HeightText";
             this.HeightText.Size = new System.Drawing.Size(93, 45);
             this.HeightText.TabIndex = 10;
@@ -186,7 +185,7 @@
             // WeightText
             // 
             this.WeightText.BackColor = System.Drawing.Color.Snow;
-            this.WeightText.Location = new System.Drawing.Point(102, 287);
+            this.WeightText.Location = new System.Drawing.Point(103, 287);
             this.WeightText.Name = "WeightText";
             this.WeightText.Size = new System.Drawing.Size(93, 45);
             this.WeightText.TabIndex = 11;
@@ -199,11 +198,12 @@
             this.Controls.Add(this.AppLayout);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculator_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.AppLayout.ResumeLayout(false);
             this.AppLayout.PerformLayout();

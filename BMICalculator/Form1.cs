@@ -38,7 +38,14 @@ namespace BMICalculator
             HeightUnits.Text = "inches";
             WightUnits.Text = "pounds";
         }
-
-        
+        /// <summary>
+        /// this is the event handler for the form closing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
