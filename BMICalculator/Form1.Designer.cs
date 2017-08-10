@@ -35,6 +35,7 @@
             this.Weight = new System.Windows.Forms.Label();
             this.HeightUnits = new System.Windows.Forms.Label();
             this.WightUnits = new System.Windows.Forms.Label();
+            this.Calculate = new System.Windows.Forms.Button();
             this.AppLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             this.AppLayout.Controls.Add(this.Weight, 0, 4);
             this.AppLayout.Controls.Add(this.HeightUnits, 2, 3);
             this.AppLayout.Controls.Add(this.WightUnits, 2, 4);
+            this.AppLayout.Controls.Add(this.Calculate, 0, 5);
             this.AppLayout.Location = new System.Drawing.Point(1, 1);
             this.AppLayout.Name = "AppLayout";
             this.AppLayout.RowCount = 6;
@@ -127,6 +129,17 @@
             this.WightUnits.TabIndex = 5;
             this.WightUnits.Text = "kg";
             // 
+            // Calculate
+            // 
+            this.Calculate.BackColor = System.Drawing.Color.Snow;
+            this.AppLayout.SetColumnSpan(this.Calculate, 3);
+            this.Calculate.Location = new System.Drawing.Point(3, 358);
+            this.Calculate.Name = "Calculate";
+            this.Calculate.Size = new System.Drawing.Size(294, 50);
+            this.Calculate.TabIndex = 6;
+            this.Calculate.Text = "Calculate";
+            this.Calculate.UseVisualStyleBackColor = false;
+            // 
             // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -156,6 +169,7 @@
         private System.Windows.Forms.Label Weight;
         private System.Windows.Forms.Label HeightUnits;
         private System.Windows.Forms.Label WightUnits;
+        private System.Windows.Forms.Button Calculate;
     }
 }
 
