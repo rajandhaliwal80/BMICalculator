@@ -33,6 +33,8 @@
             this.Metric = new System.Windows.Forms.RadioButton();
             this.Height = new System.Windows.Forms.Label();
             this.Weight = new System.Windows.Forms.Label();
+            this.HeightUnits = new System.Windows.Forms.Label();
+            this.WightUnits = new System.Windows.Forms.Label();
             this.AppLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +48,8 @@
             this.AppLayout.Controls.Add(this.Imperial, 0, 0);
             this.AppLayout.Controls.Add(this.Height, 0, 3);
             this.AppLayout.Controls.Add(this.Weight, 0, 4);
+            this.AppLayout.Controls.Add(this.HeightUnits, 2, 3);
+            this.AppLayout.Controls.Add(this.WightUnits, 2, 4);
             this.AppLayout.Location = new System.Drawing.Point(1, 1);
             this.AppLayout.Name = "AppLayout";
             this.AppLayout.RowCount = 6;
@@ -55,7 +59,7 @@
             this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.AppLayout.Size = new System.Drawing.Size(319, 431);
+            this.AppLayout.Size = new System.Drawing.Size(300, 430);
             this.AppLayout.TabIndex = 0;
             // 
             // Imperial
@@ -65,7 +69,7 @@
             this.Imperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Imperial.Location = new System.Drawing.Point(3, 3);
             this.Imperial.Name = "Imperial";
-            this.Imperial.Size = new System.Drawing.Size(97, 28);
+            this.Imperial.Size = new System.Drawing.Size(93, 28);
             this.Imperial.TabIndex = 0;
             this.Imperial.TabStop = true;
             this.Imperial.Text = "Imperial";
@@ -75,7 +79,7 @@
             // 
             this.Metric.AutoSize = true;
             this.Metric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Metric.Location = new System.Drawing.Point(109, 3);
+            this.Metric.Location = new System.Drawing.Point(102, 3);
             this.Metric.Name = "Metric";
             this.Metric.Size = new System.Drawing.Size(82, 28);
             this.Metric.TabIndex = 1;
@@ -89,7 +93,7 @@
             this.Height.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Height.Location = new System.Drawing.Point(3, 213);
             this.Height.Name = "Height";
-            this.Height.Size = new System.Drawing.Size(100, 25);
+            this.Height.Size = new System.Drawing.Size(68, 50);
             this.Height.TabIndex = 2;
             this.Height.Text = "My Height";
             // 
@@ -99,9 +103,29 @@
             this.Weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Weight.Location = new System.Drawing.Point(3, 284);
             this.Weight.Name = "Weight";
-            this.Weight.Size = new System.Drawing.Size(99, 24);
+            this.Weight.Size = new System.Drawing.Size(69, 48);
             this.Weight.TabIndex = 3;
             this.Weight.Text = "My Weight";
+            // 
+            // HeightUnits
+            // 
+            this.HeightUnits.AutoSize = true;
+            this.HeightUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeightUnits.Location = new System.Drawing.Point(201, 213);
+            this.HeightUnits.Name = "HeightUnits";
+            this.HeightUnits.Size = new System.Drawing.Size(38, 25);
+            this.HeightUnits.TabIndex = 4;
+            this.HeightUnits.Text = "cm";
+            // 
+            // WightUnits
+            // 
+            this.WightUnits.AutoSize = true;
+            this.WightUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WightUnits.Location = new System.Drawing.Point(201, 284);
+            this.WightUnits.Name = "WightUnits";
+            this.WightUnits.Size = new System.Drawing.Size(33, 25);
+            this.WightUnits.TabIndex = 5;
+            this.WightUnits.Text = "kg";
             // 
             // BMICalculator
             // 
@@ -130,6 +154,8 @@
         private System.Windows.Forms.RadioButton Imperial;
         private System.Windows.Forms.Label Height;
         private System.Windows.Forms.Label Weight;
+        private System.Windows.Forms.Label HeightUnits;
+        private System.Windows.Forms.Label WightUnits;
     }
 }
 
