@@ -26,5 +26,19 @@ namespace BMICalculator
         {
 
         }
+
+        private void Metric_CheckedChanged(object sender, EventArgs e)
+        {
+            HeightUnits.Text = "m";
+            WightUnits.Text = "kgs";
+        }
+
+        private void Imperial_CheckedChanged(object sender, EventArgs e)
+        {
+            HeightUnits.Text = "inches";
+            WightUnits.Text = "pounds";
+        }
+
+        
     }
 }

@@ -83,6 +83,7 @@
             this.Metric.TabStop = true;
             this.Metric.Text = "Metric";
             this.Metric.UseVisualStyleBackColor = true;
+            this.Metric.CheckedChanged += new System.EventHandler(this.Metric_CheckedChanged);
             // 
             // Height
             // 
@@ -97,10 +98,10 @@
             // Weight
             // 
             this.Weight.AutoSize = true;
-            this.Weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Weight.Location = new System.Drawing.Point(3, 284);
             this.Weight.Name = "Weight";
-            this.Weight.Size = new System.Drawing.Size(69, 48);
+            this.Weight.Size = new System.Drawing.Size(74, 50);
             this.Weight.TabIndex = 3;
             this.Weight.Text = "My Weight";
             // 
@@ -110,9 +111,9 @@
             this.HeightUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeightUnits.Location = new System.Drawing.Point(201, 213);
             this.HeightUnits.Name = "HeightUnits";
-            this.HeightUnits.Size = new System.Drawing.Size(38, 25);
+            this.HeightUnits.Size = new System.Drawing.Size(28, 25);
             this.HeightUnits.TabIndex = 4;
-            this.HeightUnits.Text = "cm";
+            this.HeightUnits.Text = "m";
             // 
             // WightUnits
             // 
@@ -123,6 +124,7 @@
             this.WightUnits.Size = new System.Drawing.Size(33, 25);
             this.WightUnits.TabIndex = 5;
             this.WightUnits.Text = "kg";
+            //this.WightUnits.Click += new System.EventHandler(this.WightUnits_Click);
             // 
             // Calculate
             // 
@@ -132,7 +134,7 @@
             this.Calculate.Name = "Calculate";
             this.Calculate.Size = new System.Drawing.Size(294, 50);
             this.Calculate.TabIndex = 6;
-            this.Calculate.Text = "Calculate";
+            this.Calculate.Text = "Calculate BMI";
             this.Calculate.UseVisualStyleBackColor = false;
             // 
             // Imperial
@@ -146,12 +148,14 @@
             this.Imperial.TabStop = true;
             this.Imperial.Text = "Imperial";
             this.Imperial.UseVisualStyleBackColor = true;
+            this.Imperial.CheckedChanged += new System.EventHandler(this.Imperial_CheckedChanged);
             // 
             // BMIResults
             // 
             this.BMIResults.BackColor = System.Drawing.Color.Snow;
             this.BMIResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AppLayout.SetColumnSpan(this.BMIResults, 3);
+            this.BMIResults.Enabled = false;
             this.BMIResults.Location = new System.Drawing.Point(3, 74);
             this.BMIResults.Multiline = true;
             this.BMIResults.Name = "BMIResults";
@@ -164,6 +168,7 @@
             this.result.BackColor = System.Drawing.Color.Snow;
             this.result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AppLayout.SetColumnSpan(this.result, 3);
+            this.result.Enabled = false;
             this.result.Location = new System.Drawing.Point(3, 145);
             this.result.Name = "result";
             this.result.ReadOnly = true;
