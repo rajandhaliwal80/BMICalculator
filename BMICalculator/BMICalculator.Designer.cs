@@ -40,6 +40,7 @@
             this.result = new System.Windows.Forms.TextBox();
             this.HeightText = new System.Windows.Forms.TextBox();
             this.WeightText = new System.Windows.Forms.TextBox();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.AppLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.AppLayout.Controls.Add(this.ResetButton, 0, 6);
             this.AppLayout.Controls.Add(this.Metric, 1, 0);
             this.AppLayout.Controls.Add(this.Height, 0, 3);
             this.AppLayout.Controls.Add(this.Weight, 0, 4);
@@ -62,13 +64,14 @@
             this.AppLayout.Controls.Add(this.WeightText, 1, 4);
             this.AppLayout.Location = new System.Drawing.Point(1, 1);
             this.AppLayout.Name = "AppLayout";
-            this.AppLayout.RowCount = 6;
-            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.AppLayout.RowCount = 7;
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.AppLayout.Size = new System.Drawing.Size(300, 430);
             this.AppLayout.TabIndex = 0;
             // 
@@ -76,7 +79,7 @@
             // 
             this.Metric.AutoSize = true;
             this.Metric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Metric.Location = new System.Drawing.Point(103, 3);
+            this.Metric.Location = new System.Drawing.Point(102, 3);
             this.Metric.Name = "Metric";
             this.Metric.Size = new System.Drawing.Size(82, 28);
             this.Metric.TabIndex = 1;
@@ -89,7 +92,7 @@
             // 
             this.Height.AutoSize = true;
             this.Height.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Height.Location = new System.Drawing.Point(3, 213);
+            this.Height.Location = new System.Drawing.Point(3, 183);
             this.Height.Name = "Height";
             this.Height.Size = new System.Drawing.Size(68, 50);
             this.Height.TabIndex = 2;
@@ -99,7 +102,7 @@
             // 
             this.Weight.AutoSize = true;
             this.Weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Weight.Location = new System.Drawing.Point(3, 284);
+            this.Weight.Location = new System.Drawing.Point(3, 244);
             this.Weight.Name = "Weight";
             this.Weight.Size = new System.Drawing.Size(74, 50);
             this.Weight.TabIndex = 3;
@@ -109,7 +112,7 @@
             // 
             this.HeightUnits.AutoSize = true;
             this.HeightUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeightUnits.Location = new System.Drawing.Point(203, 213);
+            this.HeightUnits.Location = new System.Drawing.Point(201, 183);
             this.HeightUnits.Name = "HeightUnits";
             this.HeightUnits.Size = new System.Drawing.Size(28, 25);
             this.HeightUnits.TabIndex = 4;
@@ -119,7 +122,7 @@
             // 
             this.WightUnits.AutoSize = true;
             this.WightUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WightUnits.Location = new System.Drawing.Point(203, 284);
+            this.WightUnits.Location = new System.Drawing.Point(201, 244);
             this.WightUnits.Name = "WightUnits";
             this.WightUnits.Size = new System.Drawing.Size(33, 25);
             this.WightUnits.TabIndex = 5;
@@ -129,7 +132,7 @@
             // 
             this.Calculate.BackColor = System.Drawing.Color.Snow;
             this.AppLayout.SetColumnSpan(this.Calculate, 3);
-            this.Calculate.Location = new System.Drawing.Point(3, 358);
+            this.Calculate.Location = new System.Drawing.Point(3, 308);
             this.Calculate.Name = "Calculate";
             this.Calculate.Size = new System.Drawing.Size(294, 50);
             this.Calculate.TabIndex = 6;
@@ -143,7 +146,7 @@
             this.Imperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Imperial.Location = new System.Drawing.Point(3, 3);
             this.Imperial.Name = "Imperial";
-            this.Imperial.Size = new System.Drawing.Size(94, 28);
+            this.Imperial.Size = new System.Drawing.Size(93, 28);
             this.Imperial.TabIndex = 7;
             this.Imperial.TabStop = true;
             this.Imperial.Text = "Imperial";
@@ -156,11 +159,11 @@
             this.BMIResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AppLayout.SetColumnSpan(this.BMIResults, 3);
             this.BMIResults.Enabled = false;
-            this.BMIResults.Location = new System.Drawing.Point(3, 74);
+            this.BMIResults.Location = new System.Drawing.Point(3, 64);
             this.BMIResults.Multiline = true;
             this.BMIResults.Name = "BMIResults";
             this.BMIResults.ReadOnly = true;
-            this.BMIResults.Size = new System.Drawing.Size(294, 65);
+            this.BMIResults.Size = new System.Drawing.Size(294, 55);
             this.BMIResults.TabIndex = 8;
             this.BMIResults.TextChanged += new System.EventHandler(this.BMIResults_TextChanged);
             // 
@@ -170,7 +173,7 @@
             this.result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AppLayout.SetColumnSpan(this.result, 3);
             this.result.Enabled = false;
-            this.result.Location = new System.Drawing.Point(3, 145);
+            this.result.Location = new System.Drawing.Point(3, 125);
             this.result.Name = "result";
             this.result.ReadOnly = true;
             this.result.Size = new System.Drawing.Size(294, 45);
@@ -180,7 +183,7 @@
             // HeightText
             // 
             this.HeightText.BackColor = System.Drawing.Color.Snow;
-            this.HeightText.Location = new System.Drawing.Point(103, 216);
+            this.HeightText.Location = new System.Drawing.Point(102, 186);
             this.HeightText.Name = "HeightText";
             this.HeightText.Size = new System.Drawing.Size(93, 45);
             this.HeightText.TabIndex = 10;
@@ -190,12 +193,23 @@
             // WeightText
             // 
             this.WeightText.BackColor = System.Drawing.Color.Snow;
-            this.WeightText.Location = new System.Drawing.Point(103, 287);
+            this.WeightText.Location = new System.Drawing.Point(102, 247);
             this.WeightText.Name = "WeightText";
             this.WeightText.Size = new System.Drawing.Size(93, 45);
             this.WeightText.TabIndex = 11;
             this.WeightText.TextChanged += new System.EventHandler(this.WeightText_TextChanged);
             this.WeightText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightText_KeyPress);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.BackColor = System.Drawing.Color.Snow;
+            this.AppLayout.SetColumnSpan(this.ResetButton, 3);
+            this.ResetButton.Location = new System.Drawing.Point(3, 369);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(294, 50);
+            this.ResetButton.TabIndex = 12;
+            this.ResetButton.Text = "Reset Inputs";
+            this.ResetButton.UseVisualStyleBackColor = false;
             // 
             // BMICalculator
             // 
@@ -232,6 +246,7 @@
         private System.Windows.Forms.TextBox result;
         private System.Windows.Forms.TextBox HeightText;
         private System.Windows.Forms.TextBox WeightText;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 

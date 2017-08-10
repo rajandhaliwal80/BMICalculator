@@ -19,5 +19,22 @@ namespace BMICalculator
         {
             InitializeComponent();
         }
+
+        private void SplashForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// this is the event handler for the "tick"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SplashFormTimer_Tick(object sender, EventArgs e)
+        {
+            BMICalculator calculatorForm = new BMICalculator();
+            calculatorForm.Show();
+            this.Hide();
+            SplashFormTimer.Enabled = false;//turn timer off
+        }
     }
 }
