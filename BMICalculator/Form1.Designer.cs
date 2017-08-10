@@ -1,6 +1,6 @@
 ﻿namespace BMICalculator
 {
-    partial class Form1
+    partial class BMICalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,18 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // BMICalculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.ClientSize = new System.Drawing.Size(302, 433);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.MaximizeBox = false;
+            this.Name = "BMICalculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BMI Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
