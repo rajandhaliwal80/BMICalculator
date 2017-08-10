@@ -135,6 +135,7 @@
             this.Calculate.TabIndex = 6;
             this.Calculate.Text = "Calculate BMI";
             this.Calculate.UseVisualStyleBackColor = false;
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
             // Imperial
             // 
@@ -161,6 +162,7 @@
             this.BMIResults.ReadOnly = true;
             this.BMIResults.Size = new System.Drawing.Size(294, 65);
             this.BMIResults.TabIndex = 8;
+            this.BMIResults.TextChanged += new System.EventHandler(this.BMIResults_TextChanged);
             // 
             // result
             // 
@@ -173,6 +175,7 @@
             this.result.ReadOnly = true;
             this.result.Size = new System.Drawing.Size(294, 45);
             this.result.TabIndex = 9;
+            this.result.TextChanged += new System.EventHandler(this.result_TextChanged);
             // 
             // HeightText
             // 
@@ -181,6 +184,8 @@
             this.HeightText.Name = "HeightText";
             this.HeightText.Size = new System.Drawing.Size(93, 45);
             this.HeightText.TabIndex = 10;
+            this.HeightText.TextChanged += new System.EventHandler(this.HeightText_TextChanged);
+            this.HeightText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightText_KeyPress);
             // 
             // WeightText
             // 
@@ -189,6 +194,8 @@
             this.WeightText.Name = "WeightText";
             this.WeightText.Size = new System.Drawing.Size(93, 45);
             this.WeightText.TabIndex = 11;
+            this.WeightText.TextChanged += new System.EventHandler(this.WeightText_TextChanged);
+            this.WeightText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightText_KeyPress);
             // 
             // BMICalculator
             // 

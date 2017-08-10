@@ -47,5 +47,48 @@ namespace BMICalculator
         {
             Application.Exit();
         }
+
+        private void BMIResults_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void result_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Calculate_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void HeightText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HeightText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char inputHeight = e.KeyChar;
+            if(!char.IsDigit(inputHeight)&& inputHeight!=46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void WeightText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WeightText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char inputHeight = e.KeyChar;
+            if (!char.IsDigit(inputHeight) && inputHeight != 46)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
