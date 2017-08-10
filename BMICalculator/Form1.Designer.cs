@@ -29,13 +29,17 @@
         private void InitializeComponent()
         {
             this.AppLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.Imperial = new System.Windows.Forms.RadioButton();
             this.Metric = new System.Windows.Forms.RadioButton();
             this.Height = new System.Windows.Forms.Label();
             this.Weight = new System.Windows.Forms.Label();
             this.HeightUnits = new System.Windows.Forms.Label();
             this.WightUnits = new System.Windows.Forms.Label();
             this.Calculate = new System.Windows.Forms.Button();
+            this.Imperial = new System.Windows.Forms.RadioButton();
+            this.BMIResults = new System.Windows.Forms.TextBox();
+            this.result = new System.Windows.Forms.TextBox();
+            this.HeightText = new System.Windows.Forms.TextBox();
+            this.WeightText = new System.Windows.Forms.TextBox();
             this.AppLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,12 +50,16 @@
             this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.AppLayout.Controls.Add(this.Metric, 1, 0);
-            this.AppLayout.Controls.Add(this.Imperial, 0, 0);
             this.AppLayout.Controls.Add(this.Height, 0, 3);
             this.AppLayout.Controls.Add(this.Weight, 0, 4);
             this.AppLayout.Controls.Add(this.HeightUnits, 2, 3);
             this.AppLayout.Controls.Add(this.WightUnits, 2, 4);
             this.AppLayout.Controls.Add(this.Calculate, 0, 5);
+            this.AppLayout.Controls.Add(this.Imperial, 0, 0);
+            this.AppLayout.Controls.Add(this.BMIResults, 0, 1);
+            this.AppLayout.Controls.Add(this.result, 0, 2);
+            this.AppLayout.Controls.Add(this.HeightText, 1, 3);
+            this.AppLayout.Controls.Add(this.WeightText, 1, 4);
             this.AppLayout.Location = new System.Drawing.Point(1, 1);
             this.AppLayout.Name = "AppLayout";
             this.AppLayout.RowCount = 6;
@@ -63,19 +71,6 @@
             this.AppLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.AppLayout.Size = new System.Drawing.Size(300, 430);
             this.AppLayout.TabIndex = 0;
-            // 
-            // Imperial
-            // 
-            this.Imperial.AutoSize = true;
-            this.Imperial.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Imperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Imperial.Location = new System.Drawing.Point(3, 3);
-            this.Imperial.Name = "Imperial";
-            this.Imperial.Size = new System.Drawing.Size(93, 28);
-            this.Imperial.TabIndex = 0;
-            this.Imperial.TabStop = true;
-            this.Imperial.Text = "Imperial";
-            this.Imperial.UseVisualStyleBackColor = true;
             // 
             // Metric
             // 
@@ -140,6 +135,57 @@
             this.Calculate.Text = "Calculate";
             this.Calculate.UseVisualStyleBackColor = false;
             // 
+            // Imperial
+            // 
+            this.Imperial.AutoSize = true;
+            this.Imperial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Imperial.Location = new System.Drawing.Point(3, 3);
+            this.Imperial.Name = "Imperial";
+            this.Imperial.Size = new System.Drawing.Size(93, 28);
+            this.Imperial.TabIndex = 7;
+            this.Imperial.TabStop = true;
+            this.Imperial.Text = "Imperial";
+            this.Imperial.UseVisualStyleBackColor = true;
+            // 
+            // BMIResults
+            // 
+            this.BMIResults.BackColor = System.Drawing.Color.Snow;
+            this.BMIResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AppLayout.SetColumnSpan(this.BMIResults, 3);
+            this.BMIResults.Location = new System.Drawing.Point(3, 74);
+            this.BMIResults.Multiline = true;
+            this.BMIResults.Name = "BMIResults";
+            this.BMIResults.ReadOnly = true;
+            this.BMIResults.Size = new System.Drawing.Size(294, 65);
+            this.BMIResults.TabIndex = 8;
+            // 
+            // result
+            // 
+            this.result.BackColor = System.Drawing.Color.Snow;
+            this.result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AppLayout.SetColumnSpan(this.result, 3);
+            this.result.Location = new System.Drawing.Point(3, 145);
+            this.result.Name = "result";
+            this.result.ReadOnly = true;
+            this.result.Size = new System.Drawing.Size(294, 45);
+            this.result.TabIndex = 9;
+            // 
+            // HeightText
+            // 
+            this.HeightText.BackColor = System.Drawing.Color.Snow;
+            this.HeightText.Location = new System.Drawing.Point(102, 216);
+            this.HeightText.Name = "HeightText";
+            this.HeightText.Size = new System.Drawing.Size(93, 45);
+            this.HeightText.TabIndex = 10;
+            // 
+            // WeightText
+            // 
+            this.WeightText.BackColor = System.Drawing.Color.Snow;
+            this.WeightText.Location = new System.Drawing.Point(102, 287);
+            this.WeightText.Name = "WeightText";
+            this.WeightText.Size = new System.Drawing.Size(93, 45);
+            this.WeightText.TabIndex = 11;
+            // 
             // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -164,12 +210,16 @@
 
         private System.Windows.Forms.TableLayoutPanel AppLayout;
         private System.Windows.Forms.RadioButton Metric;
-        private System.Windows.Forms.RadioButton Imperial;
         private System.Windows.Forms.Label Height;
         private System.Windows.Forms.Label Weight;
         private System.Windows.Forms.Label HeightUnits;
         private System.Windows.Forms.Label WightUnits;
         private System.Windows.Forms.Button Calculate;
+        private System.Windows.Forms.RadioButton Imperial;
+        private System.Windows.Forms.TextBox BMIResults;
+        private System.Windows.Forms.TextBox result;
+        private System.Windows.Forms.TextBox HeightText;
+        private System.Windows.Forms.TextBox WeightText;
     }
 }
 
