@@ -31,6 +31,8 @@
             this.AppLayout = new System.Windows.Forms.TableLayoutPanel();
             this.Imperial = new System.Windows.Forms.RadioButton();
             this.Metric = new System.Windows.Forms.RadioButton();
+            this.Height = new System.Windows.Forms.Label();
+            this.Weight = new System.Windows.Forms.Label();
             this.AppLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +44,8 @@
             this.AppLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.AppLayout.Controls.Add(this.Metric, 1, 0);
             this.AppLayout.Controls.Add(this.Imperial, 0, 0);
+            this.AppLayout.Controls.Add(this.Height, 0, 3);
+            this.AppLayout.Controls.Add(this.Weight, 0, 4);
             this.AppLayout.Location = new System.Drawing.Point(1, 1);
             this.AppLayout.Name = "AppLayout";
             this.AppLayout.RowCount = 6;
@@ -79,6 +83,26 @@
             this.Metric.Text = "Metric";
             this.Metric.UseVisualStyleBackColor = true;
             // 
+            // Height
+            // 
+            this.Height.AutoSize = true;
+            this.Height.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Height.Location = new System.Drawing.Point(3, 213);
+            this.Height.Name = "Height";
+            this.Height.Size = new System.Drawing.Size(100, 25);
+            this.Height.TabIndex = 2;
+            this.Height.Text = "My Height";
+            // 
+            // Weight
+            // 
+            this.Weight.AutoSize = true;
+            this.Weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Weight.Location = new System.Drawing.Point(3, 284);
+            this.Weight.Name = "Weight";
+            this.Weight.Size = new System.Drawing.Size(99, 24);
+            this.Weight.TabIndex = 3;
+            this.Weight.Text = "My Weight";
+            // 
             // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -104,6 +128,8 @@
         private System.Windows.Forms.TableLayoutPanel AppLayout;
         private System.Windows.Forms.RadioButton Metric;
         private System.Windows.Forms.RadioButton Imperial;
+        private System.Windows.Forms.Label Height;
+        private System.Windows.Forms.Label Weight;
     }
 }
 
